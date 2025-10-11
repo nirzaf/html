@@ -1,62 +1,152 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data Visualization Website">
   <title>Data Visualization</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <style>
+    body {
+      font-family: 'Trebuchet MS', Arial, sans-serif;
+      margin: 0;
+      background: burlywood;
+      color: #333;
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header .logo img {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    header .logo a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    header .highlight {
+      color: #f5d6c6;
+    }
+
+    nav .menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav .menu li a {
+      color: #fff;
+      background: #5E4238;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    nav .menu li.active a,
+    nav .menu li a:hover {
+      background: #B48A7C;
+      color: #fff;
+    }
+
+    .banner {
+      height: 200px;
+      background: url('banner.jpg') center/cover no-repeat;
+      margin: 1rem auto;
+    }
+
+    main {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem 2rem;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #fff;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+
+    .content {
+      flex: 3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2D2D2D;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      nav .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <div id="main">
-    <div id="header">
-      <div id="logo">
-        <div id="logo_text">
-          <!-- class="logo_colour", allows you to change the colour of the text -->
-          <h1><img src="style/logo.png"><a href="index.html">Data<span class="logo_colour">Visualization</span></a></h1>
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
-          <li class="selected"><a href="index.html">Home</a></li>
-          <li><a href="#">Examples</a></li>
-          <li><a href="#">A Page</a></li>
-          <li><a href="#">Another Page</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
+  <header>
+    <div class="logo">
+      <h1>
+        <img src="style/logo.png" alt="Data Visualization Logo">
+        <a href="index.html">Data <span class="highlight">Visualization</span></a>
+      </h1>
     </div>
-    <div id="content_header"></div>
-    <div id="site_content">
-      <div id="banner"></div>
-	  <div id="sidebar_container">
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            <!-- insert your sidebar items here -->
-          </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_item">
-            
-          </div>
-          <div class="sidebar_base"></div>
-        </div>
-        <div class="sidebar">
-          <div class="sidebar_top"></div>
-          <div class="sidebar_base"></div>
-        </div>
-      </div>
-      <div id="content">
-        <!-- insert the page content here -->
-      </div>
-    </div>
-    <div id="content_footer"></div>
-  </div>
-</body>
+    <nav>
+      <ul class="menu">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="#">Examples</a></li>
+        <li><a href="#">A Page</a></li>
+        <li><a href="#">Another Page</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="banner"></section>
+
+  <main>
+    <aside class="sidebar">
+      <h3>Sidebar Section</h3>
+      <ul>
+        <li><a href="#">Sidebar Link 1</a></li>
+        <li><a href="#">Sidebar Link 2</a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <h2>Welcome to Data Visualization</h2>
+      <p>This is your main content area. Add charts, reports, or articles here.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Data Visualization. All rights reserved.</p>
+  </footer>
+</body>
 </html>
